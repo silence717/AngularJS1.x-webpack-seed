@@ -1,0 +1,47 @@
+<!doctype html>
+<html ng-app="app">
+<head>
+    <title>angular-webpack-demo</title>
+    <link rel="stylesheet" href="//cdn.bootcss.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href="css/app.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="header">
+        <div class="container">
+            <nav class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#/home">Photos</a></li>
+                    <li><a href="#/forecast">forecast</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="main">
+        <div class="container">
+            <div ng-view></div>
+        </div>
+    </div>
+
+    <script src="./bundle.js"></script>
+
+    <!--<script src="../node_modules/angular/angular.js"></script>-->
+    <!--<script src="../node_modules/angular-route/angular-route.js"></script>-->
+
+    <!--<script src="./app.js"></script>-->
+
+    <!-- services-->
+    <!--<script src="js/services/appInfoService.js"></script>-->
+    <!--<script src="js/services/photoService.js"></script>-->
+    <!-- directives-->
+    <!--<script src="js/directives/appInfo/appInfo.js"></script>-->
+    <!--<script src="js/directives/installApp/installApp.js"></script>-->
+    <!-- controllers-->
+    <!--<script src="js/controllers/HomeController.js"></script>-->
+    <!--<script src="js/controllers/AppInfoController.js"></script>-->
+    <!--<script src="js/controllers/PhotoController.js"></script>-->
+
+
+</body>
+</html>
