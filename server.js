@@ -28,16 +28,16 @@ app.use(webpackHotMiddleware(compile, {
 
 var router = express.Router();
 router.all('*', function (req, res) {
-    res.sendfile(__dirname +'/app/' +req.url);
+    res.sendfile(__dirname +'/src/' +req.url);
 });
 
 app.use('/', router);
 
 
-app.listen(3000, 'localhost', function (err) {
+app.listen(3000, '127.0.0.1', function (err) {
     if (err) {
         console.log(err);
         return;
     }
-    console.log('God bless me no bug! listening at http://localhost:3000');
+    console.log('God bless me no bug! listening at http://127.0.0.1:3000');
 });

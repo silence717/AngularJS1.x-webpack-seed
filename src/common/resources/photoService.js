@@ -4,7 +4,7 @@
  * @date  2016-05-08
  */
 angular.module('app').factory('photos', ['$http', function($http) {
-    return $http.get('data/photos.json')
+    return $http.get('/common/data/photos.json')
     .success(function(data) {
         return data;
     })

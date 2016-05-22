@@ -1,0 +1,48 @@
+@import "reset.css";
+/* 头部 start */
+.header {
+    height: 50px;
+    line-height: 50px;
+    background: #00a1f2;
+    padding: 0 15px;
+    color: #fff;
+}
+.header .navs {
+    margin-left: 50px;
+}
+.header li{
+    width: 100px;
+    float: left;
+    position: relative;
+}
+.header .nav a {
+    position: relative;
+    width: 100px;
+    display: inline-block;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+}
+.header .nav.active a{
+   font-weight: bold;
+}
+/* 头部 end */
+/* 主体 start */
+.main {
+    background-color: #f4f4f4 ;
+}
+.side-bar {
+    width: 150px;
+    height: 500px;
+    float: left;
+    background: #fff;
+}
+.side-bar li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+}
+.side-bar li a:hover {
+    background-color: #eee;
+    color:#444;
+}

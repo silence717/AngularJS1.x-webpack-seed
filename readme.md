@@ -1,4 +1,4 @@
-### 使用webpack + es6 + angular 搭建学习环境
+### 使用webpack + angular 练习demo
 第一步: 克隆项目
 ```bash
     git clone https://github.com/silenceFang/angular-webpack-demo.git

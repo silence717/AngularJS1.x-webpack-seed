@@ -5,11 +5,14 @@
  */
 var path = require('path');
 var webpack = require('webpack');
+var HTMLPlugin = require('html-webpack-plugin');
+var NODE_MODULE_PATH = /node_modules/;
+var SRC_PATH = path.resolve(__dirname, 'src');
 
 module.exports = {
     devtool: 'source-map',
     entry: {
-        app:  ['webpack-hot-middleware/client?reload=true', './app/app.js']
+        app:  ['webpack-hot-middleware/client?reload=true', './src/app/app.js'],
     },
     output: {
         path: path.join(__dirname, 'build'),
@@ -22,7 +25,14 @@ module.exports = {
     },
 
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new HTMLPlugin({
+            template: './src/index.html',
+            fileName: 'index.html',
+            excludeChunks: ['app']
+        }),
+        new webpack.optimize.OccurenceOrderPlugin(),
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
     ],
 
     module: {
@@ -31,7 +41,24 @@ module.exports = {
                 test: /\.js?$/,
                 loaders: ['babel'],
                 exclude: /(node_modules|bower_components)/,
-                include: [path.join(__dirname, 'app')]
+                include: SRC_PATH
+            },
+            {
+                test: /^((?!\.tpl|index).)*\.html$/,
+                loader: 'file?name=[path][name]-[hash:8].[ext]',
+                exclude: NODE_MODULE_PATH,
+                include: SRC_PATH
+            },
+            {
+                test: /\.tpl\.html$/,
+                loaders: ['html?interpolate=true'],
+                exclude: NODE_MODULE_PATH,
+                include: SRC_PATH
+            },
+            {
+                test: /\.css$/,
+                loaders: ['style', 'css'],
+                includes: path.resolve(__dirname, 'node_modules/normalize.css')
             }
         ]
     }

@@ -1,0 +1,108 @@
+/**
+ * @description [reset css]
+ */
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p, blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    margin:0;
+    padding:0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    outline: none;
+}
+body {
+    font-size: 12px;
+    font-family: "Microsoft YaHei";
+    line-height: 1;
+}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+audio,canvas,video {
+    display: inline-block;*display: inline;*zoom: 1;
+}
+body,button,input,select,textarea {
+    font:12px tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+}
+input,select,textarea {
+    font-size:100%;
+    outline: none;
+}
+table {
+    border-collapse:collapse;border-spacing:0;
+}
+th {
+    text-align:inherit;
+}
+fieldset,img {
+    border:0;
+}
+iframe {
+    display:block;
+}
+abbr,acronym {
+    border:0;font-variant:normal;
+}
+address,caption,cite,code,dfn,em,th,var {
+    font-style:normal;
+    font-weight:500;
+}
+ol,ul {
+    list-style:none;
+}
+i {
+    font-style: normal;
+}
+caption,th {
+    text-align:left;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-size:100%;
+    font-weight:500;
+}
+/* a样式 */
+a {text-decoration:none;cursor: pointer;}
+/*a:link { color: blue; }*/
+/*a:visited { color: purple; }*/
+/*a:hover { color: red; }*/
+/*a:active { color: yellow; }*/
+
+.fn-clear:after {
+    visibility:hidden;
+    display:block;
+    font-size:0;
+    content:" ";
+    clear:both;
+    height:0;
+}
+/*ie 6/7 */
+.fn-clear {
+    zoom:1;
+}
+.fn-hide {
+    display:none;
+}
+.fn-left,
+.fn-right {
+    display:inline;
+}
+.fn-left {
+    float:left;
+}
+.fn-right {
+    float:right;
+}
+.fn-rmb {
+    font-family:"Microsoft YaHei";
+}
+.fn-text-overflow {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fn-tal{ text-align:left;}
+.fn-tar{ text-align:right;}
+.fn-tac{ text-align:center;}
+
+.fn-fwb{ font-weight:bold;}
