@@ -1,8 +1,13 @@
 /**
- * @description []
+ * @description [resource入口]
  * @author [silence_yfang@126.com]
  * @date  2016-05-22
  */
-import {genResource, dynamicExport} from 'angular-es-utils';
+import appInfoResource from './appInfoResource';
+import photoResource from './photoResource';
 
-dynamicExport(exports, 'AppResource', () => genResource('/apps', true));
+export default angular
+    .module('app.resources', [])
+    .factory('photoResource', photoResource)
+    .factory('appInfoResource', appInfoResource)
+    .name;

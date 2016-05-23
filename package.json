@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "angular": "^1.5.5",
-    "angular-es-utils": "^1.2.24",
     "angular-ui-router": "^0.2.18",
     "normalize.css": "^4.1.1"
   }
