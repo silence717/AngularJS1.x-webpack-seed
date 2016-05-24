@@ -6,7 +6,6 @@
 import './user.css';
 
 import angular from 'angular';
-import ResourceController from './ResourceCtrl';
 import footprint from './footprint';
 import baseInfo from './baseInfo';
 import {UserRouter, UserBaseInfoRouter, UserFootprintRouter} from './Routers';
@@ -18,10 +17,9 @@ export default angular
         baseInfo
     ])
     .config(config)
-    .controller('ResourceController', ResourceController)
     .name;
 
-function config($stateProvider) {
+function config($stateProvider, $urlRouterProvider) {
     'ngInject';
 
     $stateProvider.state(UserRouter.state, UserRouter.config);

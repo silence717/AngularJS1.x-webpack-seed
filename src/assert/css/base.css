@@ -22,24 +22,6 @@
     color: #fff;
     font-size: 14px;
 }
-.header .nav.active a{
-   font-weight: bold;
-}
 .main {
     background-color: #f4f4f4 ;
-}
-.side-bar {
-    width: 150px;
-    height: 500px;
-    float: left;
-    background: #fff;
-}
-.side-bar li a {
-    display: block;
-    color: #000;
-    padding: 8px 0 8px 16px;
-}
-.side-bar li a:hover {
-    background-color: #eee;
-    color:#444;
 }

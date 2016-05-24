@@ -14,11 +14,11 @@ export const UserRouter = {
     config: {
         url: '/user',
         views: {
-            '': {
+            '@': {
+                // templateUrl: './app/user/index.html'
                 template: indexTpl
             }
         },
-        controller: 'resourceCtrl',
         title: '个人中心'
     }
 };
@@ -34,22 +34,34 @@ export const UserBaseInfoRouter = {
         }
     }
 };
-
+// https://github.com/angular-ui/ui-router/wiki/Multiple-Named-Views
+// viewname@statename
 export const UserFootprintRouter = {
     state: 'user.footprint',
     config: {
         url: '/footprint',
         views: {
             'content@user': {
-                template: footPrintTpl
+                template: footPrintTpl,
+                controller: 'FootprintController',
+                controllerAs: 'vm'
             },
             'thumbList@user.footprint': {
+                // templateUrl: './app/user/footprint/thumbList.html'
                 template: thumbListTpl
             },
             'detailList@user.footprint': {
+                // templateUrl: './app/user/tpl/detailList.html'
                 template: detailListTpl
             }
         },
         title: '我的足迹'
+        // onEnter: function() {
+        //     console.log('enter user.footprint state');
+        // },
+        // onExit: function () {
+        //     // 用于初始化一些数据什么的,清空表单...
+        //     console.log('exit user.footprint state');
+        // }
     }
 };

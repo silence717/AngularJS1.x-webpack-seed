@@ -12,6 +12,8 @@ import user from './user';
 import album from './album';
 import resource from '../common/resources';
 
+import {routerConfig} from './config';
+
 
 // 定义模块
 angular
@@ -26,23 +28,6 @@ angular
     .config(routerConfig)
     .run(runBlock);
 
-function routerConfig($urlRouterProvider) {
-    'ngInject';
-
-    // 默认路由设置
-    $urlRouterProvider.otherwise('/home');
-
-    // 无视浏览器中 url末尾的"/"
-    // 设置时 url, 末尾不要添加 "/"
-    $urlRouterProvider.rule(($injector, $location) => {
-        const path = $location.path(),
-            hashTrailingSlash = path[path.length -1] === '/';
-
-        if (hashTrailingSlash) {
-            return path.slice(0, path.length -1);
-        }
-    });
-}
 
 
 function runBlock($rootScope, $state, $stateParams) {
@@ -50,4 +35,44 @@ function runBlock($rootScope, $state, $stateParams) {
 
     $rootScope.$state = $state;
     $rootScope.$stateParams = $stateParams;
+    // stateChangeStart($rootScope);
+    // stateChangeError($rootScope);
+    // stateChangeSuccess($rootScope);
+}
+// stateChangeStart
+function stateChangeStart($rootScope) {
+    $rootScope.$on('$stateChangeStart',
+        (event, toState, toParams, fromState, fromParams) => {
+            // event.preventDefault();
+            console.log('开始改变=====');
+            console.log(toState);
+            console.log(toParams);
+            console.log(fromState);
+            console.log(fromParams);
+        });
+}
+// stateChangeError
+function stateChangeError($rootScope) {
+    $rootScope.$on('$stateChangeError',
+        (event, toState, toParams, fromState, fromParams, error) => {
+            // event.preventDefault();
+            console.log('出错了=====');
+            console.log(toState);
+            console.log(toParams);
+            console.log(fromState);
+            console.log(fromParams);
+            console.log(error);
+        });
+}
+// stateChangeError
+function stateChangeSuccess($rootScope) {
+    $rootScope.$on('$stateChangeSuccess',
+        (event, toState, toParams, fromState, fromParams) => {
+            // event.preventDefault();
+            console.log('成功了=====');
+            console.log(toState);
+            console.log(toParams);
+            console.log(fromState);
+            console.log(fromParams);
+        });
 }

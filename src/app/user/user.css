@@ -1,6 +1,22 @@
+.side-bar {
+    width: 15%;
+    height: 380px;
+    float: left;
+    background: #fff;
+    margin-right: 5px;
+}
+.side-bar li a {
+    display: block;
+    color: #000;
+    padding: 8px 0 8px 16px;
+}
+.side-bar li a:hover {
+    background-color: #eee;
+    color:#444;
+}
 .resource {
     float: left;
-    margin-left: 20px;
+    width: 82%;
 }
 .resource .top{
     height: 40px;

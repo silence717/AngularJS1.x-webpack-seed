@@ -25,7 +25,7 @@ export const AlbumListRouter = {
 export const AlbumDetailRouter = {
     state: 'album.detail',
     config: {
-        url: 'album/:id',
+        url: '/:id',
         views: {
             '@': {
                 // templateUrl: albumDetailTpl,

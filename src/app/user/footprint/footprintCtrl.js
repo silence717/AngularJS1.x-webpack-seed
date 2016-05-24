@@ -1,8 +1,18 @@
 /**
- * @description []
+ * @description [我的足迹controller]
  * @author [silence_yfang@126.com]
  * @date  2016-05-19
  */
+export default class FootprintController {
+
+    constructor(cityResource) {
+        let vm = this;
+        cityResource.success(data => {
+            vm.citys = data;
+        });
+    }
+}
+
 // 是否显示结构化信息下地 信息类型
 // $scope.isShowInfoType = false;
 // // 切换展示与否

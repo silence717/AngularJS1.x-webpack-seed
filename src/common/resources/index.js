@@ -5,9 +5,11 @@
  */
 import appInfoResource from './appInfoResource';
 import photoResource from './photoResource';
+import cityResource from './cityResource';
 
 export default angular
     .module('app.resources', [])
     .factory('photoResource', photoResource)
     .factory('appInfoResource', appInfoResource)
+    .factory('cityResource', cityResource)
     .name;
