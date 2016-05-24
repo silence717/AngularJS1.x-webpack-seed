@@ -3,6 +3,9 @@
  * @author [silence_yfang@126.com]
  * @date  2016-05-22
  */
+
+import './home.css';
+
 import angular from 'angular';
 import HomeController from './HomeCtrl';
 import {HomeRouter} from './Routers';

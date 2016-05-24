@@ -3,6 +3,8 @@
  * @author [silence_yfang@126.com]
  * @date  2016-05-22
  */
+import './album.css';
+
 import angular from 'angular';
 import AlbumController from './AlbumCtrl';
 import PhotoController from './photo/PhotoCtrl';

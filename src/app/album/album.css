@@ -1,0 +1,40 @@
+.container {
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.photos .item {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+.photos .item:hover {
+    background: #000;
+    text-decoration: none;
+    transition: background 500ms;
+}
+.photos p.author {
+    color: #000;
+    padding: 24px;
+    text-align: left;
+}
+.photos .item:hover p.author, .item:hover a {
+    color: #fff;
+    text-decoration: none;
+}
+.photo {
+    margin: 0 0 80px;
+}
+.photo img {
+    width: 100%;
+}
+.photo h2 {
+    color: #000;
+    padding: 20px 108px;
+}
+.photo p {
+    color: #6f6f6f;
+    margin: 0;
+    padding: 0 108px 0;
+}

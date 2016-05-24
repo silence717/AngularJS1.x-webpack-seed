@@ -64,7 +64,7 @@
     display: inline-block;
     width: 14px;
     height: 15px;
-    background: url("../images/icon_switch.png") no-repeat;
+    background: url("../../assert/images/icon_switch.png") no-repeat;
 }
 .resource .icon-thumb {
     background-position:  -42px 0;
@@ -110,3 +110,40 @@
     color: #666;
 }
 /* 全部tab e*/
+
+.thumb-list .items {
+    overflow: hidden;
+    margin: 20px 0;
+}
+.thumb-list .item {
+    width: 180px;
+    height: 276px;
+    margin-right: 17px;
+    float: left;
+    border: 1px solid #ddd;
+}
+.thumb-list .item img {
+    width: 178px;
+    height: 135px;
+    padding-left: 1px;
+}
+.thumb-list .item-info {
+    padding: 10px 5px;
+    line-height: 24px;
+}
+.thumb-list .name {
+    font-size: 14px;
+    color: #0088cc;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.thumb-list .address {
+    font-size: 12px;
+    color: #666;
+}
+.thumb-list .item-info .time,
+.thumb-list .item-info .desc {
+    font-size: 12px;
+    color: #999;
+}

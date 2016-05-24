@@ -3,6 +3,8 @@
  * @author [silence_yfang@126.com]
  * @date  2016-05-22
  */
+import './user.css';
+
 import angular from 'angular';
 import ResourceController from './ResourceCtrl';
 import footprint from './footprint';
@@ -18,7 +20,6 @@ export default angular
     .config(config)
     .controller('ResourceController', ResourceController)
     .name;
-
 
 function config($stateProvider) {
     'ngInject';

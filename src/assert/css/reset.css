@@ -1,6 +1,3 @@
-/**
- * @description [reset css]
- */
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p, blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     margin:0;
     padding:0;
@@ -60,12 +57,7 @@ h1,h2,h3,h4,h5,h6 {
     font-size:100%;
     font-weight:500;
 }
-/* a样式 */
 a {text-decoration:none;cursor: pointer;}
-/*a:link { color: blue; }*/
-/*a:visited { color: purple; }*/
-/*a:hover { color: red; }*/
-/*a:active { color: yellow; }*/
 
 .fn-clear:after {
     visibility:hidden;
@@ -75,7 +67,6 @@ a {text-decoration:none;cursor: pointer;}
     clear:both;
     height:0;
 }
-/*ie 6/7 */
 .fn-clear {
     zoom:1;
 }
@@ -92,17 +83,12 @@ a {text-decoration:none;cursor: pointer;}
 .fn-right {
     float:right;
 }
-.fn-rmb {
-    font-family:"Microsoft YaHei";
-}
+
 .fn-text-overflow {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
-
 .fn-tal{ text-align:left;}
 .fn-tar{ text-align:right;}
 .fn-tac{ text-align:center;}
-
-.fn-fwb{ font-weight:bold;}
