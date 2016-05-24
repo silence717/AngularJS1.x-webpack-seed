@@ -5,6 +5,7 @@
  */
 import angular from 'angular';
 import HomeController from './HomeCtrl';
+import {HomeRouter} from './Routers';
 
 export default angular
     .module('app.home', [])
@@ -14,17 +15,5 @@ export default angular
 
 function config($stateProvider) {
     'ngInject';
-
-    $stateProvider
-        .state('home', {
-            url: '/home',
-            views: {
-                '@': {
-                    templateUrl: './app/home/index.html',
-                    controller: 'HomeController',
-                    controllerAs: 'vm'
-                }
-            },
-            title: '好玩的app'
-        });
+    $stateProvider.state(HomeRouter.state, HomeRouter.config);
 }

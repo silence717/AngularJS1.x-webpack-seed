@@ -7,6 +7,8 @@ import angular from 'angular';
 import ResourceController from './ResourceCtrl';
 import footprint from './footprint';
 import baseInfo from './baseInfo';
+import {UserRouter, UserBaseInfoRouter, UserFootprintRouter} from './Routers';
+
 
 export default angular
     .module('app.user', [
@@ -21,15 +23,7 @@ export default angular
 function config($stateProvider) {
     'ngInject';
 
-    $stateProvider
-        .state('user', {
-            url: '/user',
-            views: {
-                '': {
-                    templateUrl: './app/user/index.html'
-                }
-            },
-            controller: 'resourceCtrl',
-            title: '个人中心'
-        });
+    $stateProvider.state(UserRouter.state, UserRouter.config);
+    $stateProvider.state(UserBaseInfoRouter.state, UserBaseInfoRouter.config);
+    $stateProvider.state(UserFootprintRouter.state, UserFootprintRouter.config);
 }

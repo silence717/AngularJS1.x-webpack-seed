@@ -43,14 +43,15 @@ module.exports = {
                 exclude: /(node_modules|bower_components)/,
                 include: SRC_PATH
             },
+            // {
+            //     test: /^((?!\.tpl|index).)*\.html$/,
+            //     loader: 'file',
+            //     exclude: NODE_MODULE_PATH,
+            //     include: SRC_PATH
+            // },
             {
-                test: /^((?!\.tpl|index).)*\.html$/,
-                loader: 'file?name=[path][name]-[hash:8].[ext]',
-                exclude: NODE_MODULE_PATH,
-                include: SRC_PATH
-            },
-            {
-                test: /\.tpl\.html$/,
+                // test: /\.tpl\.html$/,
+                test: /\.html$/,
                 loaders: ['html?interpolate=true'],
                 exclude: NODE_MODULE_PATH,
                 include: SRC_PATH
@@ -59,6 +60,14 @@ module.exports = {
                 test: /\.css$/,
                 loaders: ['style', 'css'],
                 includes: path.resolve(__dirname, 'node_modules/normalize.css')
+            },
+            {
+                test: /\.(jpe?g|png|gif|svg)$/i,
+                loaders: [
+                    'file?hash=sha512&digest=hex&name=[hash:8].[ext]',
+                    'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false'
+                ],
+                exclude: NODE_MODULE_PATH
             }
         ]
     }

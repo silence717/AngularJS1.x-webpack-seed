@@ -6,6 +6,7 @@
 import angular from 'angular';
 import AlbumController from './AlbumCtrl';
 import PhotoController from './photo/PhotoCtrl';
+import {AlbumListRouter, AlbumDetailRouter} from './Routers';
 
 export default angular
     .module('app.album', [])
@@ -17,28 +18,6 @@ export default angular
 
 function config($stateProvider) {
     'ngInject';
-
-    $stateProvider
-        .state('album', {
-            url: '/album',
-            views: {
-                '@': {
-                    templateUrl: './app/album/index.html',
-                    controller: 'AlbumController',
-                    controllerAs: 'vm'
-                }
-            },
-            title: '好玩的相册'
-        })
-        .state('album.detail', {
-            url: 'album/:id',
-            views: {
-                '@': {
-                    templateUrl: './app/album/photo/index.html',
-                    controller: 'PhotoController',
-                    controllerAs: 'vm'
-                }
-            },
-            title: '单张照片show'
-        });
+    $stateProvider.state(AlbumListRouter.state, AlbumListRouter.config);
+    $stateProvider.state(AlbumDetailRouter.state, AlbumDetailRouter.config);
 }
