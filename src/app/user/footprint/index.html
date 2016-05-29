@@ -1,14 +1,14 @@
 <div class="personal">
     <div class="wrapper-list">
         <div class="wrapper-header">
-            <span class="number">共50个资源</span>
+            <span class="number">共3个资源</span>
             <div class="icon-switch">
-                <a class="thumb-view" ng-class={active:isShowThumb} ng-click="showThumbListClick()"><icon class="icon-thumb"></icon></a>
-                <a class="info-view" ng-class={active:isShowDetail} ng-click="showDetailListClick()"><icon class="icon-info"></icon></a>
+                <a class="thumb-view active" ng-class={active:vm.isShowThumb} ng-click="vm.showThumbListClick()"><icon class="icon-thumb"></icon></a>
+                <a class="info-view" ng-class={active:vm.isShowDetail} ng-click="vm.showDetailListClick()"><icon class="icon-info"></icon></a>
             </div>
         </div>
         <!-- 资源列表部分使用公共样式 -->
-        <div class="module-content"  ui-view="thumbList"></div>
-        <div ng-show="isShowDetail" ui-view="detailList"></div>
+        <div ng-show="vm.isShowThumb" class="module-content"  ui-view="thumbList"></div>
+        <div ng-show="vm.isShowDetail" ui-view="detailList"></div>
     </div>
 </div>

@@ -1,12 +1,14 @@
-<div class="app" ng-repeat="$app in vm.apps">
-    <app-info info=$app></app-info>
-    <install-app></install-app>
-</div>
+<div class="row">
+    <div class="app col-lg-3" ng-repeat="$app in vm.apps">
+        <app-info info=$app></app-info>
+        <install-app></install-app>
+    </div>
 
-<div>
-    <a href="javascript:;" ng-click="vm.goUserCenter();">这是一个跳转链接...</a>
-</div>
+    <!--<div>-->
+        <!--<a href="javascript:;" ng-click="vm.goUserCenter();">这是一个跳转链接...</a>-->
+    <!--</div>-->
 
-<div>
-    <a href="javascript:;" ng-click="vm.getConfig();">获取state配置</a>
+    <!--<div>-->
+        <!--<a href="javascript:;" ng-click="vm.getConfig();">获取state配置</a>-->
+    <!--</div>-->
 </div>

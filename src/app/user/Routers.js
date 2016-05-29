@@ -15,7 +15,6 @@ export const UserRouter = {
         url: '/user',
         views: {
             '@': {
-                // templateUrl: './app/user/index.html'
                 template: indexTpl
             }
         },
@@ -47,11 +46,9 @@ export const UserFootprintRouter = {
                 controllerAs: 'vm'
             },
             'thumbList@user.footprint': {
-                // templateUrl: './app/user/footprint/thumbList.html'
                 template: thumbListTpl
             },
             'detailList@user.footprint': {
-                // templateUrl: './app/user/tpl/detailList.html'
                 template: detailListTpl
             }
         },

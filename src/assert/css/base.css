@@ -1,27 +1,36 @@
 @import "reset.css";
-.header {
-    height: 50px;
-    line-height: 50px;
-    background: #00a1f2;
-    padding: 0 15px;
-    color: #fff;
-}
-.header .navs {
-    margin-left: 50px;
-}
-.header li{
-    width: 100px;
-    float: left;
-    position: relative;
-}
-.header .nav a {
-    position: relative;
-    width: 100px;
-    display: inline-block;
-    text-align: center;
-    color: #fff;
-    font-size: 14px;
-}
-.main {
+main {
     background-color: #f4f4f4 ;
+    padding: 10px 0;
+    min-height: 600px;
+}
+.navbar {
+    margin-bottom: 0;
+}
+header li.active a {
+    font-weight: bold;
+}
+.title {
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.btn:hover {
+    color: rgb(255,80,80);
+    background: rgba(255,80,80,0.25);
+    transition: background 500ms;
+    border: 1px solid rgb(255,80,80);
+}
+footer {
+    height: 50px;
+    border-top: 1px solid #e5e5e5;
+}
+footer a {
+    font-weight: 500;
+    color: #00a1f2;
+}
+footer a:hover {
+    color: #00a1f2;
 }

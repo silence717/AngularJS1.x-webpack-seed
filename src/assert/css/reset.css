@@ -2,24 +2,21 @@ body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input
     margin:0;
     padding:0;
     border: 0;
-    font-size: 100%;
     font: inherit;
     vertical-align: baseline;
     outline: none;
 }
 body {
-    font-size: 12px;
-    font-family: "Microsoft YaHei";
-    line-height: 1;
+    font: 12px/2  Microsoft YaHei,Arial;
+    color: #444;
 }
 article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section {
     display:block;
 }
 audio,canvas,video {
-    display: inline-block;*display: inline;*zoom: 1;
-}
-body,button,input,select,textarea {
-    font:12px tahoma,arial,'Hiragino Sans GB',\5b8b\4f53,sans-serif;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
 }
 input,select,textarea {
     font-size:100%;
@@ -57,8 +54,14 @@ h1,h2,h3,h4,h5,h6 {
     font-size:100%;
     font-weight:500;
 }
-a {text-decoration:none;cursor: pointer;}
-
+a {
+    text-decoration:none;
+    cursor: pointer;
+    color: #444;
+}
+a:hover {
+    color: #444;
+}
 .fn-clear:after {
     visibility:hidden;
     display:block;
@@ -70,20 +73,6 @@ a {text-decoration:none;cursor: pointer;}
 .fn-clear {
     zoom:1;
 }
-.fn-hide {
-    display:none;
-}
-.fn-left,
-.fn-right {
-    display:inline;
-}
-.fn-left {
-    float:left;
-}
-.fn-right {
-    float:right;
-}
-
 .fn-text-overflow {
     overflow: hidden;
     text-overflow: ellipsis;

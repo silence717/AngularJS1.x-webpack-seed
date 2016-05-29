@@ -11,18 +11,18 @@ export default function installApp() {
         scope: {},
         templateUrl: './components/installApp/installApp.html',
         link: function(scope, element) {
-            scope.buttonText = 'Install',
-                scope.installed = false,
-                scope.download = function() {
-                    element.toggleClass('btn-active');
-                    if(scope.installed) {
-                        scope.buttonText = 'Installed';
-                        scope.installed = false;
-                    } else {
-                        scope.buttonText = 'Uninstalled';
-                        scope.installed = true
-                    }
+            scope.buttonText = '安装',
+            scope.installed = false,
+            scope.download = function() {
+                element.addClass('btn-active');
+                if(scope.installed) {
+                    scope.buttonText = '安装';
+                    scope.installed = false;
+                } else {
+                    scope.buttonText = '卸载';
+                    scope.installed = true
                 }
+            }
         }
     }
 }

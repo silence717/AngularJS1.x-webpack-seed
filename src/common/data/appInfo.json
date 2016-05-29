@@ -1,26 +1,18 @@
 [
   {
     "icon": "assert/images/move.jpg",
-    "title": "MOVE",
-    "developer": "MOVE, Inc.",
-    "price": 0.99
+    "title": "KEEP"
   },
   {
     "icon": "assert/images/shutterbugg.jpg",
-    "title": "Shutterbugg",
-    "developer": "Chico Dusty",
-    "price": 2.99
+    "title": "小米运动"
   },
   {
     "icon": "assert/images/gameboard.jpg",
-    "title": "Gameboard",
-    "developer": "Armando P.",
-    "price": 1.99
+    "title": "咕咚"
   },
   {
     "icon": "assert/images/forecast.jpg",
-    "title": "Forecast",
-    "developer": "Forecast",
-    "price": 1.99
+    "title": "nike running"
   }
 ]

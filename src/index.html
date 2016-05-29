@@ -6,22 +6,26 @@
     <link href="assert/css/base.css" rel="stylesheet" />
 </head>
 <body>
-    <div class="header">
-        <div class="container">
-            <nav class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                    <li ui-sref-active="active" ui-sref-active-eq ><a ui-sref="home">首页</a></li>
-                    <li ui-sref-active="active"><a ui-sref="album">相册</a></li>
-                    <li ui-sref-active="active"><a ui-sref="user.baseInfo">个人中心</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-    <div class="main">
+    <header class="navbar">
+        <nav class="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active" ui-sref-active-eq ><a ui-sref="home">首页</a></li>
+                <li ui-sref-active="active"><a ui-sref="album">相册</a></li>
+                <li ui-sref-active="active"><a ui-sref="user.baseInfo">个人中心</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="main">
         <div class="container">
             <div ui-view=""></div>
         </div>
-    </div>
+    </main>
+    <footer class="fn-tac">
+        <div class="container">
+            <p>email: silence_yfang@126.com</p>
+            <p>github:<a href="https://github.com/silence717">戳一下,吐槽我!</a></p>
+        </div>
+    </footer>
 <script src="./bundle.js"></script>
 </body>
 </html>
