@@ -119,7 +119,12 @@
     color: #666;
 }
 /* 全部tab e*/
-
+.thumb-list {
+    height: 488px;
+}
+.detail-list {
+    height: 508px;
+}
 .thumb-list .items {
     overflow: hidden;
     margin: 20px 0;

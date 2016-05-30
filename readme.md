@@ -1,4 +1,4 @@
-### 使用webpack + angular 练习demo
+### 使用 angular1.x + es2015 + webpack 练习demo
 第一步: 克隆项目
 ```bash
     git clone https://github.com/silenceFang/angular-webpack-demo.git
@@ -13,5 +13,5 @@
 ```
 第四步: 访问项目
 ```javascript
-    http://localhost:3000
+    http://127.0.0.1:3000
 ```
