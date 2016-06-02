@@ -53,12 +53,5 @@ export const UserFootprintRouter = {
             }
         },
         title: '我的足迹'
-        // onEnter: function() {
-        //     console.log('enter user.footprint state');
-        // },
-        // onExit: function () {
-        //     // 用于初始化一些数据什么的,清空表单...
-        //     console.log('exit user.footprint state');
-        // }
     }
 };

@@ -12,7 +12,6 @@ export const AlbumListRouter = {
         url: '/album',
             views: {
             '@': {
-                // templateUrl: albumListTpl,
                 template: albumListTpl,
                 controller: 'AlbumController',
                 controllerAs: 'vm'
@@ -28,7 +27,6 @@ export const AlbumDetailRouter = {
         url: '/:id',
         views: {
             '@': {
-                // templateUrl: albumDetailTpl,
                 template: albumDetailTpl,
                 controller: 'PhotoController',
                 controllerAs: 'vm'

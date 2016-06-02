@@ -7,7 +7,6 @@
                 <a class="info-view" ng-class={active:vm.isShowDetail} ng-click="vm.showDetailListClick()"><icon class="icon-info"></icon></a>
             </div>
         </div>
-        <!-- 资源列表部分使用公共样式 -->
         <div ng-show="vm.isShowThumb" class="module-content"  ui-view="thumbList"></div>
         <div ng-show="vm.isShowDetail" ui-view="detailList"></div>
     </div>

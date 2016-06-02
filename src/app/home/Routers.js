@@ -1,5 +1,5 @@
 /**
- * @description []
+ * @description [首页路由设置]
  * @author [silence_yfang@126.com]
  * @date  2016-05-24
  */
@@ -11,7 +11,6 @@ export const HomeRouter = {
         url: '/home',
         views: {
             '@': {
-                // templateUrl: './app/home/index.html',
                 template: homeTpl,
                 controller: 'HomeController',
                 controllerAs: 'vm'
