@@ -9,8 +9,9 @@ export default class AlbumController {
 
         let vm = this;
 
-        photoResource.success(data => {
-            vm.photos = data;
-        })
+        // photoResource.success(data => {
+        //     vm.photos = data;
+        // })
+        vm.photos = photoResource.query();
     }
 }

@@ -8,10 +8,8 @@ export default class HomeController {
     constructor(appInfoResource, $state) {
 
         let vm = this;
-        appInfoResource.success(data => {
-            vm.apps = data;
-        });
-
+        vm.apps = appInfoResource.query();
+        
         vm.state = $state;
     }
 }

@@ -3,13 +3,7 @@
  * @author [silence_yfang@126.com]
  * @date  2016-05-24
  */
-export default function cityResource($http) {
+export default function cityResource($resource) {
     'ngInject';
-    return $http.get('/common/data/citys.json')
-            .success(function(data) {
-                return data;
-            })
-            .error(function(err) {
-                return err;
-            });
+    return $resource('/common/data/citys.json');
 }

@@ -4,13 +4,7 @@
  * @date  2016-05-08
  */
 
-export default function photoResource($http) {
+export default function photoResource($resource) {
     'ngInject';
-    return $http.get('/common/data/photos.json')
-            .success(function(data) {
-                return data;
-            })
-            .error(function(data) {
-                return data;
-            });
+    return $resource('/common/data/photos.json');
 }

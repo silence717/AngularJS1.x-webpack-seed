@@ -7,9 +7,8 @@ export default class FootprintController {
 
     constructor(cityResource) {
         let vm = this;
-        cityResource.success(data => {
-            vm.citys = data;
-        });
+
+        vm.citys = cityResource.query();
 
         vm.isShowThumb = true;
         vm.isShowDetail = false;

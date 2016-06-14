@@ -4,13 +4,7 @@
  * @date  2016-05-08
  */
 
-export default function appInfoResource($http) {
+export default function appInfoResource($resource) {
     'ngInject';
-    return $http.get('/common/data/appInfo.json')
-            .success(function(data) {
-                return data;
-            })
-            .error(function(err) {
-                return err;
-            });
+    return $resource('/common/data/appInfo.json');
 }

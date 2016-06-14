@@ -5,6 +5,7 @@
  */
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
+import ngResource from 'angular-resource';
 import components from '../components';
 
 import home from './home';
@@ -19,6 +20,7 @@ import {routerConfig} from './config';
 angular
     .module('app', [
         uiRouter,
+        ngResource,
         components,
         home,
         album,

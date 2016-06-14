@@ -8,9 +8,6 @@ export default class PhotoController {
     constructor(photoResource, $stateParams) {
 
         let vm = this;
-
-        photoResource.success(data => {
-            vm.detail = data[$stateParams.id];
-        })
+        vm.detail = photoResource.query();
     }
 }
