@@ -1,24 +1,19 @@
 /**
- * @description []
+ * @description [启动文件]
  * @author [silence_yfang@126.com]
  * @date  2016-05-09
  */
-/**
- * @description [入口文件]
- * @author [silence_yfang@126.com]
- * @date  2016-05-09
- */
-var webpack = require('webpack');
-var express = require('express');
-var webpackDevMiddleware = require('webpack-dev-middleware');
-var webpackHotMiddleware = require('webpack-hot-middleware');
-var config = require('./webpack.config');
-// var chokidar = require('chokidar').watch('./mock');
-
-var app = express();
-var compile = webpack(config);
-var router = express.Router();
-
+var fs = require('fs'),
+    express = require('express'),
+    app = express(),
+    webpack = require('webpack'),
+    webpackDevMiddleware = require('webpack-dev-middleware'),
+    webpackHotMiddleware = require('webpack-hot-middleware'),
+    config = require('./webpack.config'),
+    bodyParser = require('body-parser'),
+    chokidar = require('chokidar').watch('./mock'),
+    compile = webpack(config),
+    router = express.Router();
 
 app.use(webpackDevMiddleware(compile, {
     publicPath: config.output.publicPath,
@@ -28,29 +23,28 @@ app.use(webpackDevMiddleware(compile, {
 app.use(webpackHotMiddleware(compile, {
     log: console.log
 }));
-//////
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({
-//     extended: false
-// }));
-// app.use(cookieParser());
 
-// app.use(function (res, req, next) {
-//     require('./mock')(res, req, next);
-// });
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
+
+app.use(function (res, req, next) {
+    require('./mock')(res, req, next);
+});
 
 // https://github.com/paulmillr/chokidar
-// chokidar.on('ready', function () {
-//     chokidar.on('all', function () {
-//         console.log('Server restarting...');
-//
-//         Object.keys(require.cache).forEach(function (id) {
-//             if (/[\/\\]mock[\/\\]/.test(id)) {
-//                 delete require.cache[id];
-//             }
-//         });
-//     });
-// });
+chokidar.on('ready', function () {
+    chokidar.on('all', function () {
+        console.log('Server restarting...');
+
+        Object.keys(require.cache).forEach(function (id) {
+            if (/[\/\\]mock[\/\\]/.test(id)) {
+                delete require.cache[id];
+            }
+        });
+    });
+});
 
 router.all('*', function (req, res) {
     res.sendfile(__dirname +'/src/' +req.url);

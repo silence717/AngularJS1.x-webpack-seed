@@ -6,5 +6,6 @@
 
 export default function appInfoResource($resource) {
     'ngInject';
-    return $resource('/common/data/appInfo.json');
+    // return $resource('/common/data/appInfo.json');
+    return $resource('/apps');
 }

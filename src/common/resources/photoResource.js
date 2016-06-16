@@ -6,5 +6,5 @@
 
 export default function photoResource($resource) {
     'ngInject';
-    return $resource('/common/data/photos.json');
+    return $resource('/photos');
 }

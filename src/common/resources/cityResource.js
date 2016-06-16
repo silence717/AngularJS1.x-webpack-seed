@@ -5,5 +5,6 @@
  */
 export default function cityResource($resource) {
     'ngInject';
-    return $resource('/common/data/citys.json');
+    // return $resource('/common/data/citys.json');
+    return $resource('/citys');
 }
