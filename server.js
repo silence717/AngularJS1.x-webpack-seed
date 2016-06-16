@@ -3,8 +3,7 @@
  * @author [silence_yfang@126.com]
  * @date  2016-05-09
  */
-var fs = require('fs'),
-    express = require('express'),
+var express = require('express'),
     app = express(),
     webpack = require('webpack'),
     webpackDevMiddleware = require('webpack-dev-middleware'),
@@ -29,16 +28,16 @@ app.use(bodyParser.urlencoded({
     extended: false
 }));
 
-app.use(function (res, req, next) {
+app.use(function(res, req, next) {
     require('./mock')(res, req, next);
 });
 
 // https://github.com/paulmillr/chokidar
-chokidar.on('ready', function () {
-    chokidar.on('all', function () {
+chokidar.on('ready', function() {
+    chokidar.on('all', function() {
         console.log('Server restarting...');
 
-        Object.keys(require.cache).forEach(function (id) {
+        Object.keys(require.cache).forEach(function(id) {
             if (/[\/\\]mock[\/\\]/.test(id)) {
                 delete require.cache[id];
             }
@@ -46,14 +45,14 @@ chokidar.on('ready', function () {
     });
 });
 
-router.all('*', function (req, res) {
-    res.sendfile(__dirname +'/src/' +req.url);
+router.all('*', function(req, res) {
+    res.sendfile(__dirname + '/src/' + req.url);
 });
 
 app.use('/', router);
 
 
-app.listen(3000, '127.0.0.1', function (err) {
+app.listen(3000, '127.0.0.1', function(err) {
     if (err) {
         console.log(err);
         return;

@@ -9,7 +9,6 @@ export default class HomeController {
 
         let vm = this;
         vm.apps = appInfoResource.query();
-        
         vm.state = $state;
     }
 }

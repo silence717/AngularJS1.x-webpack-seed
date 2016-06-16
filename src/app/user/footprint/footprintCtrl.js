@@ -14,13 +14,13 @@ export default class FootprintController {
         vm.isShowDetail = false;
     }
     // 切换为缩略图展示
-    showThumbListClick() {
-        this.isShowThumb = true;
-        this.isShowDetail = false;
-    }
-    // 切换为详细列表
-    showDetailListClick() {
-        this.isShowThumb = false;
-        this.isShowDetail = true;
-    }
+    // showThumbListClick() {
+    //     this.isShowThumb = true;
+    //     this.isShowDetail = false;
+    // }
+    // // 切换为详细列表
+    // showDetailListClick() {
+    //     this.isShowThumb = false;
+    //     this.isShowDetail = true;
+    // }
 }

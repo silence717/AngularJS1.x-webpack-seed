@@ -19,7 +19,7 @@ export default angular
     .config(config)
     .name;
 
-function config($stateProvider, $urlRouterProvider) {
+function config($stateProvider) {
     'ngInject';
 
     $stateProvider.state(UserRouter.state, UserRouter.config);

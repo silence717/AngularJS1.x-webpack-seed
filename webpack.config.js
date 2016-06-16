@@ -3,26 +3,37 @@
  * @author [fang.yang@shuyun.com]
  * @date  2016-04-21
  */
-var path = require('path');
-var webpack = require('webpack');
-var HTMLPlugin = require('html-webpack-plugin');
-var NODE_MODULE_PATH = /node_modules/;
-var SRC_PATH = path.resolve(__dirname, 'src');
+
+var path = require('path'),
+    webpack = require('webpack'),
+    HTMLPlugin = require('html-webpack-plugin'),
+    eslintFriendlyFormatter = require('eslint-friendly-formatter'),
+    NODE_MODULE_PATH = /node_modules/,
+    SRC_PATH = path.resolve(__dirname, 'src'),
+    ASSETS_PATH = /SRC\\assets/;
 
 module.exports = {
     devtool: 'source-map',
     entry: {
-        app:  ['webpack-hot-middleware/client?reload=true', './src/app/app.js'],
+        app: ['webpack-hot-middleware/client?reload=true', './src/app/app.js']
     },
     output: {
         path: path.join(__dirname, 'build'),
         filename: 'bundle.js',
-        publicPath: "/"
+        publicPath: '/'
     },
 
     resolve: {
         extensions: ['', '.js']
     },
+
+    eslint: {
+        configFile: '.eslintrc',
+        emitError: true,
+        emitWarning: true,
+        formatter: eslintFriendlyFormatter
+    },
+
 
     plugins: [
         new HTMLPlugin({
@@ -33,6 +44,15 @@ module.exports = {
         new webpack.optimize.OccurenceOrderPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin()
+    ],
+
+    preLoaders: [
+        {
+            test: '\.js$',
+            loader: 'eslint-loader',
+            exclude: [/node_modules/, ASSETS_PATH],
+            include: SRC_PATH
+        }
     ],
 
     module: {
